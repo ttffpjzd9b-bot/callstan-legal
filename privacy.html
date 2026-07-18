@@ -60,8 +60,10 @@ Portal и серверную инфраструктуру, работающие 
 (streak), опыт (XP) и уровень персонажа.</p>
 
 <p><strong>Данные подписки и покупок.</strong> Информация о тарифе (Free / Lite / Pro) и статусе
-подписки. Оплата и данные карты обрабатываются исключительно Apple через App Store / StoreKit —
-Провайдер услуги не получает и не хранит платёжные реквизиты.</p>
+подписки. В приложении оплата и данные карты обрабатываются исключительно Apple через App Store /
+StoreKit; на веб-портале (для преподавателей и веб-кабинета ученика) — платёжной системой
+Робокасса. В обоих случаях Провайдер услуги не получает и не хранит платёжные реквизиты (номер
+карты и т. п.) — только факт и сумму платежа, необходимые для активации тарифа.</p>
 
 <p><strong>Связь ученик–преподаватель.</strong> Если ученик указывает свой уникальный код
 ученика, преподаватель получает доступ к истории занятий, прогрессу и статистике этого ученика
@@ -97,6 +99,9 @@ OpenAI и не используются OpenAI для обучения их мо
   приложения и портала;</li>
   <li><strong>Apple</strong> — аутентификация (Sign in with Apple), обработка подписок
   (StoreKit), доставка push-уведомлений (APNs);</li>
+  <li><strong>Робокасса</strong> — обработка платежей на веб-портале (тарифы преподавателя и
+  веб-кабинета ученика); Провайдер услуги передаёт только сумму и назначение платежа, реквизиты
+  карты вводятся непосредственно на стороне Робокассы;</li>
   <li><strong>Telegram</strong> — используется только во внутреннем процессе модерации: заявки
   преподавателей и предложенные ими темы/задания проходят проверку администратора сервиса через
   защищённого Telegram-бота. Личные учебные данные учеников через Telegram не передаются.</li>
@@ -225,8 +230,10 @@ vocabulary list and its review schedule, skill scores (grammar, vocabulary, flue
 an estimated CEFR level (A1–C1), homework assignments, daily streaks, XP, and character level.</p>
 
 <p><strong>Subscription and purchase data.</strong> Your plan (Free / Lite / Pro) and subscription
-status. Payment and card data are processed exclusively by Apple via the App Store / StoreKit —
-the Service Provider never receives or stores payment credentials.</p>
+status. In the app, payment and card data are processed exclusively by Apple via the App Store /
+StoreKit; on the web portal (teacher tiers and the student web cabinet), by the payment provider
+Robokassa. In both cases, the Service Provider never receives or stores payment credentials (card
+number, etc.) — only the fact and amount of payment needed to activate the plan.</p>
 
 <p><strong>Student–teacher link.</strong> If a student enters their unique student code, the
 linked teacher gains access to that student's call history, progress, and statistics via the
@@ -261,6 +268,9 @@ itself.</p>
   <li><strong>Cloudflare (Workers)</strong> — backend API serving the app and the portal;</li>
   <li><strong>Apple</strong> — authentication (Sign in with Apple), subscription processing
   (StoreKit), push delivery (APNs);</li>
+  <li><strong>Robokassa</strong> — payment processing on the web portal (teacher tiers and the
+  student web cabinet); the Service Provider only passes the payment amount and purpose, card
+  details are entered directly on Robokassa's side;</li>
   <li><strong>Telegram</strong> — used solely for internal moderation: teacher applications and
   teacher-submitted topics/assignments are reviewed by the Service Provider's administrator via a
   private Telegram bot. Students' personal learning data is not transmitted via Telegram.</li>
